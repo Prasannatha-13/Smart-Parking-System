@@ -9,7 +9,7 @@ def mouse_click(event, x, y, flags, params):
         print(f"Point added: {(x,y)}")
 
 # Load image
-img = cv2.imread("image.jpg")
+img = cv2.imread(r'C:\Users\banot\OneDrive\Desktop\Smart Parking System\Smart-Parking-System\image.jpg')
 cv2.namedWindow("Select Slots")
 cv2.setMouseCallback("Select Slots", mouse_click)
 
@@ -25,7 +25,7 @@ while True:
         break
 
 # Save slots
-with open("slots.pkl", "wb") as f:
+with open(r"C:\Users\banot\OneDrive\Desktop\Smart Parking System\Smart-Parking-System\Slots.pkl", "wb") as f:
     pickle.dump(slots, f)
 
 print("✅ Slots saved!")
